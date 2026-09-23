@@ -1,0 +1,66 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ProjectContext",
+  "type": "object",
+  "properties": {
+    "project_name": { "type": "string" },
+    "analyzed_at": { "type": "string", "format": "date-time" },
+    "solution_files": { "type": "array", "items": { "type": "string" } },
+    "runtime": {
+      "type": "object",
+      "properties": {
+        "generation": { "type": "string", "enum": ["legacy-framework", "core", "modern-dotnet", "mixed"] },
+        "target_frameworks": { "type": "array", "items": { "type": "string" } },
+        "csharp_version": { "type": "string" },
+        "nullable_enabled": { "type": "boolean" },
+        "global_json_sdk": { "type": ["string", "null"] }
+      },
+      "required": ["generation", "target_frameworks", "csharp_version"]
+    },
+    "web": {
+      "type": "object",
+      "properties": {
+        "framework": { "type": "string", "enum": ["aspnet-core", "mvc5", "webapi2", "wcf", "blazor", "none"] },
+        "style": { "type": "string", "enum": ["controllers", "minimal-apis", "razor-pages", "wcf-services", "none"] }
+      }
+    },
+    "data_access": {
+      "type": "object",
+      "properties": {
+        "orm": { "type": "string", "enum": ["ef-core", "ef6", "dapper", "ado-net", "none"] },
+        "database": { "type": "string", "enum": ["sql-server", "postgresql", "sqlite", "mysql", "oracle", "in-memory", "none"] },
+        "migrations": { "type": "string", "enum": ["ef-core-migrations", "ef6-code-first", "sql-scripts", "none"] }
+      }
+    },
+    "enterprise": {
+      "type": "object",
+      "properties": {
+        "abp_framework": { "type": "boolean" },
+        "abp_version": { "type": ["string", "null"] }
+      }
+    },
+    "testing": {
+      "type": "object",
+      "properties": {
+        "frameworks": { "type": "array", "items": { "type": "string" } },
+        "mocking": { "type": "array", "items": { "type": "string" } },
+        "assertions": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "architecture_pattern": { "type": "string", "enum": ["clean-architecture", "vertical-slice", "n-tier", "modular-monolith", "microservices", "classic-mvc"] },
+    "legacy_indicators": {
+      "type": "object",
+      "properties": {
+        "has_packages_config": { "type": "boolean" },
+        "has_web_config": { "type": "boolean" },
+        "has_wcf": { "type": "boolean" },
+        "has_sync_context_dependency": { "type": "boolean" }
+      }
+    },
+    "resolved_skills": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  },
+  "required": ["project_name", "runtime", "web", "data_access", "resolved_skills"]
+}

@@ -1,0 +1,53 @@
+{
+  "project_name": "fixture-1-legacy-mvc5",
+  "analyzed_at": "2026-09-23T16:54:26.107367+00:00",
+  "solution_files": [
+    "LegacyApp.sln"
+  ],
+  "runtime": {
+    "generation": "legacy-framework",
+    "target_frameworks": [
+      "v4.8"
+    ],
+    "csharp_version": "7.3",
+    "nullable_enabled": false,
+    "global_json_sdk": null
+  },
+  "web": {
+    "framework": "mvc5",
+    "style": "controllers"
+  },
+  "data_access": {
+    "orm": "ef6",
+    "database": "sql-server",
+    "migrations": "ef6-code-first"
+  },
+  "enterprise": {
+    "abp_framework": false,
+    "abp_version": null
+  },
+  "testing": {
+    "frameworks": [],
+    "mocking": [],
+    "assertions": []
+  },
+  "architecture_pattern": "classic-mvc",
+  "legacy_indicators": {
+    "has_packages_config": true,
+    "has_web_config": true,
+    "has_wcf": false,
+    "has_sync_context_dependency": false
+  },
+  "resolved_skills": [
+    "skills/coding/csharp-idioms",
+    "skills/coding/error-handling-result",
+    "skills/database/ef-diagnostics",
+    "skills/database/sql-safety",
+    "skills/engineering/evidence-first",
+    "skills/engineering/minimal-change",
+    "skills/legacy/legacy-safety-guard",
+    "skills/project-analysis/legacy-discovery",
+    "skills/security/secrets-audit",
+    "skills/security/secure-by-default"
+  ]
+}

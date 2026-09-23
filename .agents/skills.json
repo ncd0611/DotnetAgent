@@ -1,0 +1,14 @@
+{
+  "entries": [
+    { "path": "skills/project-analysis" },
+    { "path": "skills/engineering" },
+    { "path": "skills/architecture" },
+    { "path": "skills/coding" },
+    { "path": "skills/database" },
+    { "path": "skills/testing" },
+    { "path": "skills/security" },
+    { "path": "skills/performance" },
+    { "path": "skills/migration" },
+    { "path": "skills/legacy" }
+  ]
+}
